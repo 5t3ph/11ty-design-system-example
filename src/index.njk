@@ -1,5 +1,10 @@
 ---
 layout: base.njk
-title: Hello World
+title: 11ty + Sass Design System
 ---
 
+<ul>
+{% for page in collections.docs %}
+  <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
+{% endfor %}
+</ul>

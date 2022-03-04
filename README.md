@@ -1,10 +1,6 @@
-![logo](https://repository-images.githubusercontent.com/302921248/58478900-0adf-11eb-8f0b-74be58a898ef)
+# 11ty Design System Example
 
-# 11ty Sass Skeleton
-
-Featuring absolutely nothing beyond a base HTML5 template and the essential setup to watch and compile your Sass alongside 11ty.
-
-Includes minifiying and autoprefixing of styles `postbuild`.
+In-progress, being built on Twitch! Join us Fridays at 9 AM Central, [subscribe to 5t3phDev](https://twitch.tv/5t3phDev) for go-live notifications.
 
 <small>Created by [@5t3ph](https://twitter.com/5t3ph)</small>
 

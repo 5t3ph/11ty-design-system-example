@@ -1,0 +1,9 @@
+---
+title: Colors
+---
+
+<ul class="swatches">
+{% for token in colorTokens %}
+  <li class="background-{{ token.name }}">{{ token.name }}<br>{{ token.color }}</li>
+{% endfor %}
+</ul>

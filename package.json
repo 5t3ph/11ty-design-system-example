@@ -1,20 +1,21 @@
 {
-  "name": "11ty-sass-skeleton",
-  "version": "1.4.0",
-  "description": "Featuring absolutely nothing beyond a base HTML5 template and the essential setup to watch and compile your Sass alongside 11ty.",
+  "name": "11ty-design-system-example",
+  "version": "0.1.0",
+  "description": "In-progress, live on twitch.tv/5t3phDev",
   "main": "index.html",
   "scripts": {
+    "color-tokens": "a11y-color-tokens --outputDirPath='src/sass' --colorTokensPath='src/_data/colorTokens.js' --compatibilityDocsPath='src/docs/'",
     "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
     "watch:eleventy": "eleventy --serve",
     "build:sass": "sass  --no-source-map src/sass:public/css",
     "build:eleventy": "eleventy",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-    "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "npm-run-all build:sass build:eleventy"
+    "start": "npm-run-all color-tokens build:sass --parallel watch:*",
+    "build": "npm-run-all color-tokens build:sass build:eleventy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/5t3ph/11ty-sass-skeleton.git"
+    "url": "git+https://github.com/5t3ph/11ty-design-system-example.git"
   },
   "author": "5t3ph",
   "license": "ISC",
@@ -31,5 +32,8 @@
   "browserslist": [
     "> 0.5%",
     "not IE 11"
-  ]
+  ],
+  "devDependencies": {
+    "a11y-color-tokens": "^0.5.0"
+  }
 }

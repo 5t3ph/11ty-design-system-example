@@ -1,0 +1,5 @@
+@use "color-tokens" as *;
+
+:root {
+  @include color-tokens;
+}

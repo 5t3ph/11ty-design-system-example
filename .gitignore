@@ -3,6 +3,7 @@ node_modules
 
 # build artifacts
 public
+.vscode
 
 # secrets and errors
 .env

@@ -1,0 +1,17 @@
+.swatches {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15ch, 1fr));
+
+  li {
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    border-radius: .5rem;
+    font-size: 3rem;
+    text-align: center;
+  }
+}
