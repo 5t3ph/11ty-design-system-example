@@ -1,7 +1,6 @@
 @use "theme";
-@use "global";
+@use "global"; // with ($type-ratio: "goldenRatio");
 
 body {
-  font-family: sans-serif;
   background-color: #f9f9f9;
 }
