@@ -3,3 +3,7 @@
 :root {
   @include color-tokens;
 }
+
+body {
+  color: var(--color-text);
+}

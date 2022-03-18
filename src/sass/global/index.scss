@@ -1,3 +1,4 @@
-@use "reset";
-@use "colors";
-@use "typography";
+@forward "reset";
+@forward "colors";
+@forward "typography";
+@forward "links";
