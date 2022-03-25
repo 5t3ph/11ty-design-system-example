@@ -1,0 +1,14 @@
+.container {
+  --container-width: 80ch;
+
+  width: min(var(--container-width), 100vw - 3rem);
+  margin-inline: auto;
+}
+
+// .container--sm {
+//   --container-width: 30ch;
+// }
+
+.spacing--mbs {
+  margin-block-start: min(4rem, 8vh);
+}

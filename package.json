@@ -4,14 +4,14 @@
   "description": "In-progress, live on twitch.tv/5t3phDev",
   "main": "index.html",
   "scripts": {
-    "color-tokens": "a11y-color-tokens --outputDirPath='src/sass' --colorTokensPath='src/_data/colorTokens.js' --compatibilityDocsPath='src/docs/'",
+    "color-tokens": "a11y-color-tokens --outputDirPath='src/sass' --colorTokensPath='src/_data/colorTokens.js' --compatibilityDocsPath='src/__docs'",
     "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
     "watch:eleventy": "eleventy --serve",
     "build:sass": "sass  --no-source-map src/sass:public/css",
     "build:eleventy": "eleventy",
     "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
-    "start": "npm-run-all color-tokens build:sass --parallel watch:*",
-    "build": "npm-run-all color-tokens build:sass build:eleventy"
+    "start": "cross-env ELEVENTY_ENV=dev npm-run-all color-tokens build:sass --parallel watch:*",
+    "build": "cross-env ELEVENTY_ENV=prod npm-run-all color-tokens build:sass build:eleventy"
   },
   "repository": {
     "type": "git",
