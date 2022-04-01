@@ -1,5 +1,6 @@
 @use "theme";
 @use "global"; // with ($type-ratio: "goldenRatio");
+@use "components";
 
 body {
   background-color: #f9f9f9;

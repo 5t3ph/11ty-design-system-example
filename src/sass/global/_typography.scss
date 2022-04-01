@@ -1,5 +1,6 @@
 @use "sass:math";
 
+$font-family-headlines: 'Gentium Basic', serif !default;
 $font-weight-bold: 600 !default;
 
 // Learn more about what's going on here:
@@ -94,6 +95,13 @@ $level-size: $type-base-size;
 
 // Test retrieving heading style value from the map
 // @debug "h3:" #{type-style(h3)};
+
+h1,
+h2,
+h3 {
+  font-family: $font-family-headlines;
+  font-weight: 700;
+}
 
 p,
 li,

@@ -1,0 +1,57 @@
+$card-border-radius: ".75rem" !default;
+
+.card {
+  border-radius: #{$card-border-radius};
+  box-shadow: var(--shadow);
+  overflow: hidden;
+
+  > img {
+    object-fit: cover;
+    aspect-ratio: var(--card-aspect-ratio, 1);
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    padding: var(--card-padding, 1rem);
+  }
+}
+
+.card--feature-image {
+  display: grid;
+  grid-template-areas: "card";
+  align-items: end;
+  justify-content: center;
+  position: relative;
+
+  a::before,
+  &::before {
+    content: "";
+    inset: 0;
+    position: absolute;
+  }
+
+  &::before {
+    background-image: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
+    top: 30%;
+  }
+
+  > * {
+    grid-area: card;
+  }
+
+  .card__content {
+    text-align: center;
+    color: var(--color-light);
+    z-index: 1;
+
+    .card__title {
+      margin-block-end: .5rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}

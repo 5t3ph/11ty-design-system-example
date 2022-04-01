@@ -2,6 +2,13 @@
 
 :root {
   @include color-tokens;
+
+  --shadow-color: 0deg 0% 0%;
+  --shadow:
+    0.1px 0.5px 0.7px hsl(var(--shadow-color) / 0.01),
+    0.3px 2px 2.9px -0.2px hsl(var(--shadow-color) / 0.03),
+    0.5px 3.9px 5.6px -0.4px hsl(var(--shadow-color) / 0.06),
+    1.1px 8.2px 11.7px -0.5px hsl(var(--shadow-color) / 0.08);
 }
 
 body {

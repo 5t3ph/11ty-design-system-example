@@ -7,4 +7,8 @@ module.exports = [
     name: "text",
     color: "#424242",
   },
+  {
+    name: "light",
+    color: "#fff",
+  },
 ];

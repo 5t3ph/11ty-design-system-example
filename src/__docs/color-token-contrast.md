@@ -6,6 +6,7 @@ title: Color Token Contrast
 
 ## color-primary
   - `color-on-primary`
+  - `color-light`
 
 ## color-on-primary
   - `color-primary`
@@ -14,6 +15,15 @@ title: Color Token Contrast
 ## color-text
   - `color-on-primary`
   - `color-on-text`
+  - `color-light`
 
 ## color-on-text
   - `color-text`
+
+## color-light
+  - `color-primary`
+  - `color-text`
+  - `color-on-light`
+
+## color-on-light
+  - `color-light`

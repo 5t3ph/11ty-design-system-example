@@ -7,14 +7,18 @@ $color-primary: #4363e9 !default;
 $color-on-primary: #EFF3FF !default;
 $color-text: #424242 !default;
 $color-on-text: #AEAEAE !default;
+$color-light: #fff !default;
+$color-on-light: #767676 !default;
 
-$base-color-tokens: ("primary", "text");
+$base-color-tokens: ("primary", "text", "light");
 
 $color-tokens: (
   "color-primary": $color-primary,
   "color-on-primary": $color-on-primary,
   "color-text": $color-text,
-  "color-on-text": $color-on-text
+  "color-on-text": $color-on-text,
+  "color-light": $color-light,
+  "color-on-light": $color-on-light
 ) !default;
 
 @mixin color-tokens() {
@@ -22,4 +26,6 @@ $color-tokens: (
   --color-on-primary: #{$color-on-primary};
   --color-text: #{$color-text};
   --color-on-text: #{$color-on-text};
+  --color-light: #{$color-light};
+  --color-on-light: #{$color-on-light};
 }
