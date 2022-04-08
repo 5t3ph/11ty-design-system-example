@@ -15,14 +15,21 @@ $card-border-radius: ".75rem" !default;
   &__content {
     padding: var(--card-padding, 1rem);
   }
+
+  &__title {
+    font-size: var(--card-title-size, var(--font-size-h3));
+  }
 }
 
 .card--feature-image {
+  --card-aspect-ratio: unset;
+
   display: grid;
   grid-template-areas: "card";
   align-items: end;
   justify-content: center;
   position: relative;
+  aspect-ratio: var(--card-feature-aspect-ratio, 1);
 
   a::before,
   &::before {
@@ -46,6 +53,8 @@ $card-border-radius: ".75rem" !default;
     z-index: 1;
 
     .card__title {
+      --card-title-size: var(--font-size-h2);
+
       margin-block-end: .5rem;
     }
 
