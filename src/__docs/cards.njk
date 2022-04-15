@@ -2,7 +2,47 @@
 title: Cards
 ---
 
-<div class="card card--feature-image">
+{# Example of using a partial #}
+
+{# {% set cardType = 'feature' %}
+{% set cardImg = '/assets/card-image-1.jpg' %}
+{% set cardTitle = 'West California' %}
+{% set featureLinkUrl = '#' %}
+{% set featureLinkContent = 'Explore now<span class="inclusively-hidden"> - view West Canada</span>' %}
+{% include "card.njk" %} #}
+
+{# Example of using a shortcode #}
+
+{# {% set featureCardType = 'feature' %}
+{% card cardType = featureCardType, cardImg = '/assets/card-image-1.jpg', cardTitle = 'West California', featureLinkUrl = '#', featureLinkContent = 'Explore now<span class="inclusively-hidden"> - view West Canada</span>'  %} #}
+
+{# Example of using macros #}
+{%- from 'card.macro.njk' import card %}
+
+{% set card1Content %}
+Explore now<span class="inclusively-hidden"> - view West Canada</span>
+{% endset %}
+
+{{ card({ 
+  type: 'feature', 
+  img: '/assets/card-image-1.jpg', 
+  title: 'West California', 
+  featureLinkUrl: '#', 
+  featureLinkContent: card1Content
+}) }}
+
+{% set card2Content %}
+Explore now<span class="inclusively-hidden"> - view West Canada</span>
+{% endset %}
+
+{{ card({ 
+  img: '/assets/card-image-1.jpg', 
+  title: 'West California', 
+  content: card2Content
+}) }}
+
+{# Original card HTML #}
+{# <div class="card card--feature-image">
   <img src="/assets/card-image-1.jpg" alt="" >
 
   <div class="card__content">
@@ -18,4 +58,4 @@ title: Cards
     <h3 class="card__title">West California</h3>
     <a href="#">Explore now<span class="inclusively-hidden"> - view West Canada</span></a>
   </div>
-</div>
+</div> #}

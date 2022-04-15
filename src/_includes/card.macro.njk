@@ -1,0 +1,19 @@
+{%- macro card(prop) -%}
+  {%- set cardClasses %}
+  {{ 'card--feature-image' if prop.type == 'feature' }}
+  {% endset -%}
+
+  <div class="card {{ cardClasses }}">
+    <img src="{{ prop.img }}" alt="{{ prop.alt }}" >
+
+    <div class="card__content">
+      <h3 class="card__title">{{ prop.title }}</h3>
+
+      {% if prop.type == 'feature' %}
+        <a href="{{ prop.featureLinkUrl }}">{{ prop.featureLinkContent | safe }}</a>
+      {% else %}
+        {{ prop.content | safe }}
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}

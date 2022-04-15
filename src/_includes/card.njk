@@ -1,0 +1,15 @@
+{%- set cardClasses %}
+{{ 'card--feature-image' if cardType == 'feature' }}
+{% endset -%}
+
+<div class="card {{ cardClasses }}">
+  <img src="{{ cardImg }}" alt="{{ cardAlt }}" >
+
+  <div class="card__content">
+    <h3 class="card__title">{{ cardTitle }}</h3>
+
+    {% if cardType == 'feature' %}
+      <a href="{{ featureLinkUrl }}">{{ featureLinkContent | safe }}</a>
+    {% endif %}
+  </div>
+</div>
